@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 
-// Conectar a MongoDB (SIN opciones antiguas)
+// Conectar a MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('✅ MongoDB conectado'))
   .catch(err => console.error('❌ Error al conectar MongoDB:', err));
@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
   res.send('API Funcionando');
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+// 🔥 IMPORTANTE PARA RENDER
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 Servidor escuchando en puerto ${PORT}`);
 });
