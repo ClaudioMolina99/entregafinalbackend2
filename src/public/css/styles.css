@@ -1,0 +1,56 @@
+/* ============================
+   ESTILO GENERAL
+============================ */
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* ============================
+   TARJETAS DE PRODUCTO
+============================ */
+.product-card {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-card h3 {
+    margin-top: 0;
+}
+
+/* ============================
+   BOTONES
+============================ */
+button, .btn {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
+    background: #218838;
+}
+
+/* ============================
+   LINKS
+============================ */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,22 @@
+<h1>{{product.title}}</h1>
+
+<p><strong>Descripción:</strong> {{product.description}}</p>
+<p><strong>Precio:</strong> ${{product.price}}</p>
+<p><strong>Categoría:</strong> {{product.category}}</p>
+<p><strong>Stock:</strong> {{product.stock}}</p>
+
+{{#if product.thumbnails}}
+    <p><strong>Imágenes:</strong></p>
+    {{#each product.thumbnails}}
+        <img src="{{this}}" alt="imagen del producto" width="150">
+    {{/each}}
+{{else}}
+    <p><em>No hay imágenes disponibles.</em></p>
+{{/if}}
+
+<form action="/api/carts/6931e4a9bdd2be1e98888524/product/{{product._id}}" method="POST">
+    <button type="submit">Agregar al carrito</button>
+</form>
+
+<br>
+<a href="/products">← Volver al listado</a>
