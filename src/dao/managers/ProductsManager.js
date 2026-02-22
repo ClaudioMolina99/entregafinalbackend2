@@ -1,4 +1,4 @@
-import productModel from '../models/product.js';
+import productModel from '../../models/product.js';
 
 export default class ProductsManager {
     getProducts(query, options) {
