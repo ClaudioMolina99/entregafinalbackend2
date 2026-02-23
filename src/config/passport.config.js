@@ -19,6 +19,7 @@ export const initializePassport = () => {
           return done(null, false);
         }
 
+        // ✅ ORDEN CORRECTO SEGÚN TU HASH
         if (!isValidPassword(user, password)) {
           return done(null, false);
         }

@@ -59,10 +59,11 @@ router.get("/:pid", async (req, res) => {
   try {
     const product = await manager.getProductById(req.params.pid);
 
-    if (!product)
+    if (!product) {
       return res
         .status(404)
         .json({ status: "error", error: "Product not found" });
+    }
 
     res.json({ status: "success", payload: product });
   } catch (err) {
